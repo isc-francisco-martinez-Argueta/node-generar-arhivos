@@ -1,0 +1,355 @@
+{
+    "incidencias": [
+        {
+            "lugarDeHechos": {
+                "calle": "LA PLAYA",
+                "colonia": "LA PLAYA",
+                "municipio": "Guadalupe",
+                "estado": "Nuevo León",
+                "postal": "",
+                "lat": "",
+                "lng": ""
+            },
+            "entidadPersonas": [],
+            "capturo": {
+                "_id": "640651886bf83c17b4ce35ce",
+                "nombre": "CECILIA CONTRERAS"
+            },
+            "dependencia": {
+                "_id": "635327b9a144eb1228f4dd7e",
+                "nombre": "FUERZA CIVIL"
+            },
+            "areaReporte": {
+                "_id": "637db3186cbfd6127092111b",
+                "nombre": "CELULA 1"
+            },
+            "tipoEvento": "empadronamientos",
+            "delito": "",
+            "tipoDelito": "",
+            "subDelito": "",
+            "folioC5": "230764695",
+            "folioIPH": "",
+            "iphFile": "",
+            "folio": "",
+            "fechaHoraEvento": "2023-01-01T19:41:00.000",
+            "fechaHoraConocimiento": "",
+            "fechaHoraRespondiente": "",
+            "primerRespondiente": {
+                "institucion": "FC",
+                "activo": true,
+                "_id": "635814df44bbc635ee1de99f",
+                "empleado": "812731",
+                "grado": "POL. 3/o.",
+                "nombre": "ARELLANO MAR JOSE ALEJANDRO"
+            },
+            "elementosEnSitio": [],
+            "narrativa": "MOTIVO ACTITUD EVASIVA",
+            "personas": [],
+            "vehiculos": [],
+            "armas": [],
+            "drogas": [],
+            "telefonia": [
+                {
+                    "datosAdicionales": {
+                        "telefonia": {
+                            "numero": "8181203181",
+                            "imei": ""
+                        }
+                    },
+                    "archivos": ["2023041166.jpg"],
+                    "_id": "6435fe335e48b50254c7be0b",
+                    "calidad": "",
+                    "observaciones": ""
+                }
+            ],
+            "objetos": [],
+            "domicilios": [],
+            "documentos": [],
+            "dinero": [
+                {
+                    "datosAdicionales": {
+                        "dinero": {
+                            "cantidad": "2000",
+                            "tipo": ""
+                        }
+                    },
+                    "archivos": ["2023041111.jpg"],
+                    "_id": "6435fec45e48b50254c7be0f",
+                    "calidad": "EMPADRONADO",
+                    "observaciones": "SE LE ASEGURO LA CANTIDAD DE 2000"
+                }
+            ],
+            "cuentas": [],
+            "grupo": "OPERACIONES",
+            "crp": "",
+            "bodycam": "F799160010",
+            "caso": "",
+            "fechaHoraCaptura": "2023-04-11T19:09:31-05:00",
+            "fechaHoraActualizacion": "2023-04-11T19:54:04-05:00",
+            "uid": "6435f6bb5e48b50254c7bdf5"
+        }
+    ],
+    "personasDB": [
+        {
+            "alias": ["JESUS"],
+            "archivos": [
+                "2023041108.jpg",
+                "2023041181.jpg",
+                "2023041182.jpg",
+                "2023041189.jpg"
+            ],
+            "activo": true,
+            "incidenteId": "6435f6bb5e48b50254c7bdf5",
+            "fechaCreacion": "2023-04-11T18:19:09-06:00",
+            "nombre": "JESUS REYMUNDO",
+            "apellidoP": "SEGOVIA",
+            "apellidoM": "VAZQUEZ",
+            "edad": "19",
+            "fechaNacimiento": "2003-07-18",
+            "telefono": "8118659936",
+            "telefonoContacto": "",
+            "genero": "637291b6112d132dac0b4dc6",
+            "estadoCivil": "63728aff3369732bb8ec0b62",
+            "nacionalidad": "637280200f6cdf272bf7adae",
+            "ocupacion": "6410e191a3c911a0a25d06b6",
+            "escolaridad": "6372a419adf8393317677935",
+            "nombrePadre": "",
+            "nombreMadre": "",
+            "estatura": "",
+            "vestimenta": "SUDADERA ROJA, PANTALON CAMUFLAJEADO, TENIS NEGROS",
+            "sueldoSemanal": null,
+            "domicilio": "6435f8fc5e48b50254c7bdfb",
+            "antecedentes": [],
+            "proceso": "CAPTURA",
+            "calidad": {
+                "activo": true,
+                "_id": "640fa62c2981bd23d397c7db",
+                "nombre": "EMPADRONADO"
+            },
+            "observaciones": "ORIGINARIO DEL EDO N.L.",
+            "identificacion": [],
+            "señasParticulares": [],
+            "huellasDigitales": [],
+            "fotoGeneral": [],
+            "fotoRostro": [],
+            "uid": "6435f8fc5e48b50254c7bdfc"
+        },
+        {
+            "alias": [],
+            "archivos": ["2023041124.jpg", "2023041145.jpg", "2023041166.jpg"],
+            "activo": true,
+            "incidenteId": "6435f6bb5e48b50254c7bdf5",
+            "fechaCreacion": "2023-04-11T18:23:17-06:00",
+            "nombre": "JOSE CRUZ DE",
+            "apellidoP": "DIOSDADO",
+            "apellidoM": "MURILLO",
+            "edad": "33",
+            "fechaNacimiento": "1990-01-03",
+            "telefono": "",
+            "telefonoContacto": "",
+            "genero": "637291b6112d132dac0b4dc6",
+            "estadoCivil": "63728b3e3369732bb8ec0b63",
+            "nacionalidad": "637280200f6cdf272bf7adae",
+            "ocupacion": "6410e191a3c911a0a25d06a2",
+            "escolaridad": "6412131cf465cf26546758f4",
+            "nombrePadre": "",
+            "nombreMadre": "",
+            "estatura": "",
+            "vestimenta": "PLAYERA AZUL Y PANTALON DE MEZCLILLA",
+            "sueldoSemanal": null,
+            "domicilio": "6435f9f55e48b50254c7be01",
+            "antecedentes": [],
+            "proceso": "CAPTURA",
+            "calidad": {
+                "activo": true,
+                "_id": "640fa62c2981bd23d397c7db",
+                "nombre": "EMPADRONADO"
+            },
+            "observaciones": "ORIGINARIO DEL EDO. GUANAJUATO\nTATUAJE RELOJ EN MANO DERECHA",
+            "identificacion": [],
+            "señasParticulares": [],
+            "huellasDigitales": [],
+            "fotoGeneral": [],
+            "fotoRostro": [],
+            "uid": "6435f9f55e48b50254c7be02"
+        },
+        {
+            "alias": [],
+            "archivos": [
+                "2023041101.jpg",
+                "2023041117.jpg",
+                "2023041121.jpg",
+                "2023041142.jpg",
+                "2023041143.jpg",
+                "2023041148.jpg",
+                "2023041153.jpg",
+                "2023041158.jpg",
+                "2023041188.jpg"
+            ],
+            "activo": true,
+            "incidenteId": "6435f6bb5e48b50254c7bdf5",
+            "fechaCreacion": "2023-04-11T18:31:26-06:00",
+            "nombre": "JORGE ANGEL",
+            "apellidoP": "MACIAS",
+            "apellidoM": "JARA",
+            "edad": "18",
+            "fechaNacimiento": "2004-08-14",
+            "telefono": "",
+            "telefonoContacto": "",
+            "genero": "637291b6112d132dac0b4dc6",
+            "estadoCivil": "63728b3e3369732bb8ec0b63",
+            "nacionalidad": "637280200f6cdf272bf7adae",
+            "ocupacion": "6410e191a3c911a0a25d06b5",
+            "escolaridad": "6372a434adf8393317677937",
+            "nombrePadre": "",
+            "nombreMadre": "",
+            "estatura": "",
+            "vestimenta": "",
+            "sueldoSemanal": null,
+            "domicilio": "6435fbde5e48b50254c7be04",
+            "antecedentes": [],
+            "proceso": "CAPTURA",
+            "calidad": {
+                "activo": true,
+                "_id": "640fa62c2981bd23d397c7db",
+                "nombre": "EMPADRONADO"
+            },
+            "observaciones": "ORIGINARIO DEL EDO. N.L.",
+            "identificacion": [],
+            "señasParticulares": [],
+            "huellasDigitales": [],
+            "fotoGeneral": [],
+            "fotoRostro": [],
+            "uid": "6435fbde5e48b50254c7be05"
+        }
+    ],
+    "vehiculosDB": [
+        {
+            "archivos": ["2023041134.jpg", "2023041136.jpg", "2023041190.jpg"],
+            "activo": true,
+            "calidad": {
+                "activo": true,
+                "_id": "640fa62c2981bd23d397c7db",
+                "nombre": "EMPADRONADO"
+            },
+            "tipo": {
+                "_id": "6408b45f22aad2435c451a15",
+                "descripcion": "TERRESTRE"
+            },
+            "modelo": "2020",
+            "marca": {
+                "_id": "6407e46dd89101e5d167dd5c",
+                "descripcion": "Nissan"
+            },
+            "submarca": {
+                "activo": true,
+                "_id": "642afd3a16a63b1148e25fd0",
+                "descripcion": "V DRIVE",
+                "marca": "6407e46dd89101e5d167dd5c",
+                "__v": 0
+            },
+            "color": "BLANCO/AMARILLO",
+            "placa": "A162MKN",
+            "serie": "3N1CN7AD1LK401131",
+            "motor": "",
+            "niv": "",
+            "propietario": "",
+            "observaciones": "SIN REPORTE",
+            "fechaCreacion": "2023-04-11T18:34:13-06:00",
+            "incidenteId": "6435f6bb5e48b50254c7bdf5",
+            "uid": "6435fc855e48b50254c7be06"
+        },
+        {
+            "archivos": [
+                "2023041106.jpg",
+                "2023041117.jpg",
+                "2023041127.jpg",
+                "2023041156.jpg",
+                "2023041187.jpg"
+            ],
+            "activo": true,
+            "calidad": {
+                "activo": true,
+                "_id": "640fa62c2981bd23d397c7db",
+                "nombre": "EMPADRONADO"
+            },
+            "tipo": {
+                "_id": "6408b45f22aad2435c451a15",
+                "descripcion": "TERRESTRE"
+            },
+            "modelo": "2012",
+            "marca": {
+                "_id": "6407e46dd89101e5d167dd5c",
+                "descripcion": "Nissan"
+            },
+            "submarca": {
+                "activo": true,
+                "_id": "6408b2e222aad2435c451a0e",
+                "nombre": "56",
+                "descripcion": "Tsuru",
+                "marca": "6407e46dd89101e5d167dd5c"
+            },
+            "color": "BLANCO",
+            "placa": "SPX977A",
+            "serie": "3N1EB31S4CK323940",
+            "motor": "",
+            "niv": "",
+            "propietario": "",
+            "observaciones": "LA PLACA DELANTERA LA TIENE COLOCADA EN EL PARABRISAS",
+            "fechaCreacion": "2023-04-11T18:39:36-06:00",
+            "incidenteId": "6435f6bb5e48b50254c7bdf5",
+            "uid": "6435fdc85e48b50254c7be0a"
+        }
+    ],
+    "armasDB": [
+        {
+            "archivos": ["2023041158.jpg"],
+            "activo": true,
+            "cantidad": 0,
+            "tipo": {
+                "_id": "6408b4af22aad2435c451a20",
+                "descripcion": "ARMA DE FUEGO CORTA"
+            },
+            "calibre": {
+                "_id": "6408b4c722aad2435c451ae1",
+                "descripcion": "0.45"
+            },
+            "matricula": "",
+            "fabricante": "",
+            "noSerie": "",
+            "modelo": "",
+            "calidad": {
+                "activo": true,
+                "_id": "640fa62c2981bd23d397c7db",
+                "nombre": "EMPADRONADO"
+            },
+            "fechaCreacion": "2023-04-11T18:45:42-06:00",
+            "incidenteId": "6435f6bb5e48b50254c7bdf5",
+            "observaciones": "",
+            "uid": "6435ff355e48b50254c7be12"
+        }
+    ],
+    "drogasDB": [
+        {
+            "archivos": ["2023041157.jpg"],
+            "activo": true,
+            "tipo": {
+                "activo": true,
+                "_id": "63e2aff6a00e60e45583ae43",
+                "descripcion": "CRISTAL",
+                "__v": 0
+            },
+            "cantidad": 2,
+            "unidad": "BOLSITAS",
+            "calidad": {
+                "activo": true,
+                "_id": "640fa62c2981bd23d397c7db",
+                "nombre": "EMPADRONADO"
+            },
+            "observaciones": "",
+            "incidenteId": "6435f6bb5e48b50254c7bdf5",
+            "fechaCreacion": "2023-04-11T18:42:48-06:00",
+            "uid": "6435fe885e48b50254c7be0d"
+        }
+    ]
+}
