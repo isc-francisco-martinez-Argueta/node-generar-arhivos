@@ -10,6 +10,7 @@ const createExcel = async (model) => {
     const hojavehiculosDB = Workbook.addWorksheet("vehiculosDB");
     const hojaarmasDB = Workbook.addWorksheet("armasDB");
     const hojadrogasDB = Workbook.addWorksheet("drogasDB");
+    const hojaResumen = Workbook.addWorksheet("Resumen");
     //Se generan los encabezados
     hojaincidencias.columns = [
         {
