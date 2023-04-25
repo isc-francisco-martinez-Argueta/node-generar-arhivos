@@ -1,16 +1,16 @@
 const exceljs = require("exceljs");
 const modeloxls = require("./modeloXLS.json");
 const fs = require("fs");
-const createExcel = async () => {
-    // Crear un archivo excel
+const createExcel = async (model) => {
+    // Crea un archivo excel
     const Workbook = new exceljs.Workbook();
-
+    // Crea hojas en el archivo excel
     const hojaincidencias = Workbook.addWorksheet("incidencias");
     const hojapersonasDB = Workbook.addWorksheet("personasDB");
     const hojavehiculosDB = Workbook.addWorksheet("vehiculosDB");
     const hojaarmasDB = Workbook.addWorksheet("armasDB");
     const hojadrogasDB = Workbook.addWorksheet("drogasDB");
-
+    //Se generan los encabezados
     hojaincidencias.columns = [
         {
             header: "uid",
@@ -108,10 +108,9 @@ const createExcel = async () => {
             width: 30,
         },
     ];
-    let object = JSON.parse(fs.readFileSync("modeloXLS.json", "utf8"));
 
     try {
-        await object.incidencias.map((value, idx) => {
+        await model.incidencias.map((value, idx) => {
             hojaincidencias.addRow({
                 uid: value.uid,
                 calle: value.lugarDeHechos.calle,
@@ -141,6 +140,6 @@ const createExcel = async () => {
     }
 };
 
-createExcel()
+createExcel(modeloxls)
     .then((nombreArchivo) => console.log(nombreArchivo, "Creado"))
     .catch((err) => console.log(err));
