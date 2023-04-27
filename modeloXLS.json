@@ -58,8 +58,272 @@
                     },
                     "archivos": ["2023041166.jpg"],
                     "_id": "6435fe335e48b50254c7be0b",
-                    "calidad": "",
-                    "observaciones": ""
+                    "calidad": "fddf",
+                    "observaciones": "rerere"
+                }
+            ],
+            "objetos": [],
+            "domicilios": [],
+            "documentos": [],
+            "dinero": [
+                {
+                    "datosAdicionales": {
+                        "dinero": {
+                            "cantidad": "2000",
+                            "tipo": ""
+                        }
+                    },
+                    "archivos": ["2023041111.jpg"],
+                    "_id": "6435fec45e48b50254c7be0f",
+                    "calidad": "EMPADRONADO",
+                    "observaciones": "SE LE ASEGURO LA CANTIDAD DE 2000"
+                }
+            ],
+            "cuentas": [],
+            "grupo": "OPERACIONES",
+            "crp": "",
+            "bodycam": "F799160010",
+            "caso": "",
+            "fechaHoraCaptura": "2023-04-11T19:09:31-05:00",
+            "fechaHoraActualizacion": "2023-04-11T19:54:04-05:00",
+            "uid": "6435f6bb5e48b50254c7bdf5"
+        },
+        {
+            "lugarDeHechos": {
+                "calle": "LA PLAYA",
+                "colonia": "LA PLAYA",
+                "municipio": "Guadalupe",
+                "estado": "Nuevo León",
+                "postal": "",
+                "lat": "",
+                "lng": ""
+            },
+            "entidadPersonas": [],
+            "capturo": {
+                "_id": "640651886bf83c17b4ce35ce",
+                "nombre": "CECILIA CONTRERAS"
+            },
+            "dependencia": {
+                "_id": "635327b9a144eb1228f4dd7e",
+                "nombre": "FUERZA CIVIL"
+            },
+            "areaReporte": {
+                "_id": "637db3186cbfd6127092111b",
+                "nombre": "CELULA 1"
+            },
+            "tipoEvento": "empadronamientos",
+            "delito": "",
+            "tipoDelito": "",
+            "subDelito": "",
+            "folioC5": "230764695",
+            "folioIPH": "",
+            "iphFile": "",
+            "folio": "",
+            "fechaHoraEvento": "2023-01-01T19:41:00.000",
+            "fechaHoraConocimiento": "",
+            "fechaHoraRespondiente": "",
+            "primerRespondiente": {
+                "institucion": "FC",
+                "activo": true,
+                "_id": "635814df44bbc635ee1de99f",
+                "empleado": "812731",
+                "grado": "POL. 3/o.",
+                "nombre": "ARELLANO MAR JOSE ALEJANDRO"
+            },
+            "elementosEnSitio": [],
+            "narrativa": "MOTIVO ACTITUD EVASIVA",
+            "personas": [],
+            "vehiculos": [],
+            "armas": [],
+            "drogas": [],
+            "telefonia": [
+                {
+                    "datosAdicionales": {
+                        "telefonia": {
+                            "numero": "8181203181",
+                            "imei": ""
+                        }
+                    },
+                    "archivos": ["2023041166.jpg"],
+                    "_id": "6435fe335e48b50254c7be0b",
+                    "calidad": "fddf",
+                    "observaciones": "rerere"
+                }
+            ],
+            "objetos": [],
+            "domicilios": [],
+            "documentos": [],
+            "dinero": [
+                {
+                    "datosAdicionales": {
+                        "dinero": {
+                            "cantidad": "2000",
+                            "tipo": ""
+                        }
+                    },
+                    "archivos": ["2023041111.jpg"],
+                    "_id": "6435fec45e48b50254c7be0f",
+                    "calidad": "EMPADRONADO",
+                    "observaciones": "SE LE ASEGURO LA CANTIDAD DE 2000"
+                }
+            ],
+            "cuentas": [],
+            "grupo": "OPERACIONES",
+            "crp": "",
+            "bodycam": "F799160010",
+            "caso": "",
+            "fechaHoraCaptura": "2023-04-11T19:09:31-05:00",
+            "fechaHoraActualizacion": "2023-04-11T19:54:04-05:00",
+            "uid": "6435f6bb5e48b50254c7bdf5"
+        },
+        {
+            "lugarDeHechos": {
+                "calle": "LA PLAYA",
+                "colonia": "LA PLAYA",
+                "municipio": "Guadalupe",
+                "estado": "Nuevo León",
+                "postal": "",
+                "lat": "",
+                "lng": ""
+            },
+            "entidadPersonas": [],
+            "capturo": {
+                "_id": "640651886bf83c17b4ce35ce",
+                "nombre": "CECILIA CONTRERAS"
+            },
+            "dependencia": {
+                "_id": "635327b9a144eb1228f4dd7e",
+                "nombre": "FUERZA CIVIL"
+            },
+            "areaReporte": {
+                "_id": "637db3186cbfd6127092111b",
+                "nombre": "CELULA 1"
+            },
+            "tipoEvento": "empadronamientos",
+            "delito": "",
+            "tipoDelito": "",
+            "subDelito": "",
+            "folioC5": "230764695",
+            "folioIPH": "",
+            "iphFile": "",
+            "folio": "",
+            "fechaHoraEvento": "2023-01-01T19:41:00.000",
+            "fechaHoraConocimiento": "",
+            "fechaHoraRespondiente": "",
+            "primerRespondiente": {
+                "institucion": "FC",
+                "activo": true,
+                "_id": "635814df44bbc635ee1de99f",
+                "empleado": "812731",
+                "grado": "POL. 3/o.",
+                "nombre": "ARELLANO MAR JOSE ALEJANDRO"
+            },
+            "elementosEnSitio": [],
+            "narrativa": "MOTIVO ACTITUD EVASIVA",
+            "personas": [],
+            "vehiculos": [],
+            "armas": [],
+            "drogas": [],
+            "telefonia": [
+                {
+                    "datosAdicionales": {
+                        "telefonia": {
+                            "numero": "8181203181",
+                            "imei": ""
+                        }
+                    },
+                    "archivos": ["2023041166.jpg"],
+                    "_id": "6435fe335e48b50254c7be0b",
+                    "calidad": "fddf",
+                    "observaciones": "rerere"
+                }
+            ],
+            "objetos": [],
+            "domicilios": [],
+            "documentos": [],
+            "dinero": [
+                {
+                    "datosAdicionales": {
+                        "dinero": {
+                            "cantidad": "2000",
+                            "tipo": ""
+                        }
+                    },
+                    "archivos": ["2023041111.jpg"],
+                    "_id": "6435fec45e48b50254c7be0f",
+                    "calidad": "EMPADRONADO",
+                    "observaciones": "SE LE ASEGURO LA CANTIDAD DE 2000"
+                }
+            ],
+            "cuentas": [],
+            "grupo": "OPERACIONES",
+            "crp": "",
+            "bodycam": "F799160010",
+            "caso": "",
+            "fechaHoraCaptura": "2023-04-11T19:09:31-05:00",
+            "fechaHoraActualizacion": "2023-04-11T19:54:04-05:00",
+            "uid": "6435f6bb5e48b50254c7bdf5"
+        },
+        {
+            "lugarDeHechos": {
+                "calle": "LA PLAYA",
+                "colonia": "LA PLAYA",
+                "municipio": "Guadalupe",
+                "estado": "Nuevo León",
+                "postal": "",
+                "lat": "",
+                "lng": ""
+            },
+            "entidadPersonas": [],
+            "capturo": {
+                "_id": "640651886bf83c17b4ce35ce",
+                "nombre": "CECILIA CONTRERAS"
+            },
+            "dependencia": {
+                "_id": "635327b9a144eb1228f4dd7e",
+                "nombre": "FUERZA CIVIL"
+            },
+            "areaReporte": {
+                "_id": "637db3186cbfd6127092111b",
+                "nombre": "CELULA 1"
+            },
+            "tipoEvento": "empadronamientos",
+            "delito": "",
+            "tipoDelito": "",
+            "subDelito": "",
+            "folioC5": "230764695",
+            "folioIPH": "",
+            "iphFile": "",
+            "folio": "",
+            "fechaHoraEvento": "2023-01-01T19:41:00.000",
+            "fechaHoraConocimiento": "",
+            "fechaHoraRespondiente": "",
+            "primerRespondiente": {
+                "institucion": "FC",
+                "activo": true,
+                "_id": "635814df44bbc635ee1de99f",
+                "empleado": "812731",
+                "grado": "POL. 3/o.",
+                "nombre": "ARELLANO MAR JOSE ALEJANDRO"
+            },
+            "elementosEnSitio": [],
+            "narrativa": "MOTIVO ACTITUD EVASIVA",
+            "personas": [],
+            "vehiculos": [],
+            "armas": [],
+            "drogas": [],
+            "telefonia": [
+                {
+                    "datosAdicionales": {
+                        "telefonia": {
+                            "numero": "8181203181",
+                            "imei": ""
+                        }
+                    },
+                    "archivos": ["2023041166.jpg"],
+                    "_id": "6435fe335e48b50254c7be0b",
+                    "calidad": "fddf",
+                    "observaciones": "rerere"
                 }
             ],
             "objetos": [],

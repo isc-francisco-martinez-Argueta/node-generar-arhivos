@@ -1,139 +1,88 @@
-const exceljs = require("exceljs");
 const modeloxls = require("./modeloXLS.json");
 const fs = require("fs");
+const {
+    Workbook,
+    hojaincidencias,
+    hojapersonasDB,
+    hojavehiculosDB,
+    hojaarmasDB,
+    hojadrogasDB,
+    hojaResumen,
+} = require("./helpers/hojas");
+
 const createExcel = async (model) => {
-    // Crea un archivo excel
-    const Workbook = new exceljs.Workbook();
-    // Crea hojas en el archivo excel
-    const hojaincidencias = Workbook.addWorksheet("incidencias");
-    const hojapersonasDB = Workbook.addWorksheet("personasDB");
-    const hojavehiculosDB = Workbook.addWorksheet("vehiculosDB");
-    const hojaarmasDB = Workbook.addWorksheet("armasDB");
-    const hojadrogasDB = Workbook.addWorksheet("drogasDB");
-    const hojaResumen = Workbook.addWorksheet("Resumen");
-    //Se generan los encabezados
-    hojaincidencias.columns = [
-        {
-            header: "uid",
-            key: "uid",
-            width: 30,
-        },
-        {
-            header: "lugarDeHechos calle ",
-            key: "calle",
-            width: 30,
-        },
-        {
-            header: "lugarDeHechos colonia ",
-            key: "colonia",
-            width: 30,
-        },
-        {
-            header: "lugarDeHechos municipio ",
-            key: "municipio",
-            width: 30,
-        },
-        {
-            header: "lugarDeHechos estado ",
-            key: "estado",
-            width: 30,
-        },
-        {
-            header: "lugarDeHechos postal ",
-            key: "postal",
-            width: 30,
-        },
-        {
-            header: "lugarDeHechos lat ",
-            key: "lat",
-            width: 30,
-        },
-        {
-            header: "lugarDeHechos lng ",
-            key: "lng",
-            width: 30,
-        },
-        {
-            header: "capturo nombre ",
-            key: "capturo",
-            width: 30,
-        },
-        {
-            header: "dependencia nombre ",
-            key: "dependencia",
-            width: 30,
-        },
-        {
-            header: "areaReporte nombre ",
-            key: "areaReporte",
-            width: 30,
-        },
-        {
-            header: "tipoEvento ",
-            key: "tipoEvento",
-            width: 30,
-        },
-        {
-            header: "delito ",
-            key: "delito",
-            width: 30,
-        },
-        {
-            header: "tipoDelito ",
-            key: "tipoDelito",
-            width: 30,
-        },
-        {
-            header: "subDelito ",
-            key: "subDelito",
-            width: 30,
-        },
-        {
-            header: "folioC5 ",
-            key: "folioC5",
-            width: 30,
-        },
-        {
-            header: "folioIPH ",
-            key: "folioIPH",
-            width: 30,
-        },
-        {
-            header: "iphFile ",
-            key: "iphFile",
-            width: 30,
-        },
-        {
-            header: "folio ",
-            key: "folio",
-            width: 30,
-        },
-    ];
+    let countincidencia = 0,
+        countpersonasDB = 0,
+        countvehiculosDB = 0,
+        countarmasDB = 0,
+        countdrogasDB = 0;
 
     try {
         await model.incidencias.map((value, idx) => {
-            hojaincidencias.addRow({
-                uid: value.uid,
-                calle: value.lugarDeHechos.calle,
-                colonia: value.lugarDeHechos.colonia,
-                municipio: value.lugarDeHechos.municipio,
-                estado: value.lugarDeHechos.estado,
-                postal: value.lugarDeHechos.postal,
-                lat: value.lugarDeHechos.lat,
-                lng: value.lugarDeHechos.lng,
-                capturo: value.capturo.nombre,
-                dependencia: value.dependencia.nombre,
-                areaReporte: value.areaReporte.nombre,
-                tipoEvento: value.tipoEvento,
-                delito: value.delito,
-                tipoDelito: value.tipoDelito,
-                subDelito: value.subDelito,
-                folioC5: value.folioC5,
-                folioIPH: value.folioIPH,
-                iphFile: value.iphFile,
-                folio: value.folio,
+            value.telefonia.forEach((element) => {
+                value.dinero.forEach((element2) => {
+                    hojaincidencias.addRow({
+                        uid: value.uid,
+                        calle: value.lugarDeHechos.calle,
+                        colonia: value.lugarDeHechos.colonia,
+                        municipio: value.lugarDeHechos.municipio,
+                        estado: value.lugarDeHechos.estado,
+                        postal: value.lugarDeHechos.postal,
+                        lat: value.lugarDeHechos.lat,
+                        lng: value.lugarDeHechos.lng,
+                        capturo: value.capturo.nombre,
+                        dependencia: value.dependencia.nombre,
+                        areaReporte: value.areaReporte.nombre,
+                        tipoEvento: value.tipoEvento,
+                        delito: value.delito,
+                        tipoDelito: value.tipoDelito,
+                        subDelito: value.subDelito,
+                        folioC5: value.folioC5,
+                        folioIPH: value.folioIPH,
+                        iphFile: value.iphFile,
+                        folio: value.folio,
+                        fechaHoraEvento: value.fechaHoraEvento,
+                        fechaHoraConocimiento: value.fechaHoraConocimiento,
+                        fechaHoraConocimiento: value.fechaHoraConocimiento,
+                        institucion: value.primerRespondiente.institucion,
+                        activo: value.primerRespondiente.activo
+                            ? "Activo"
+                            : "Inactivo",
+                        empleado: value.primerRespondiente.empleado,
+                        grado: value.primerRespondiente.grado,
+                        nombre: value.primerRespondiente.nombre,
+                        elementosEnSitio: value.elementosEnSitio,
+                        narrativa: value.narrativa,
+                        numero: element.datosAdicionales.telefonia.numero,
+                        imei: element.datosAdicionales.telefoniaimei,
+                        calidad: element.calidad,
+                        observaciones: element.observaciones,
+                        objetos: value.objetos,
+                        dinerocantidad: `$ ${element2.datosAdicionales.dinero.cantidad}`,
+                        dinerotipo: element2.datosAdicionales.dinero.tipo,
+                        dinerocalidad: element2.calidad,
+                        dineroobservaciones: element2.observaciones,
+                        cuentas: value.cuentas,
+                        grupo: value.grupo,
+                        crp: value.crp,
+                        bodycam: value.bodycam,
+                        caso: value.caso,
+                        fechaHoraCaptura: value.fechaHoraCaptura,
+                        fechaHoraActualizacion: value.fechaHoraActualizacion,
+                    });
+                    console.log(element2.observaciones);
+                });
             });
+
+            countincidencia = countincidencia + 1;
         });
+        hojaResumen.addRow({
+            fechas: "fechas",
+            module: "incidencias",
+            total: countincidencia,
+        });
+
+        console.log(countincidencia);
         await Workbook.xlsx.writeFile("./salida/modeloXLS.xlsx");
         return `modeloXLS.xlsx`;
     } catch (err) {
