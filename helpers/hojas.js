@@ -21,14 +21,14 @@ const hojas = [
 hojas.forEach((element) => {
     element.getRow(1).font = {
         name: "Arial",
-        size: 10,
+        size: 10.5,
         bold: true,
-        color: { argb: "ff595959" },
+        color: { argb: "ff000000" },
     };
     element.getRow(1).fill = {
         type: "pattern",
         pattern: "solid",
-        fgColor: { argb: "ffd9d9d9" },
+        fgColor: { argb: "ffa6a6a6" },
     };
     element.getRow(1).alignment = {
         vertical: "middle",
@@ -39,7 +39,7 @@ hojas.forEach((element) => {
 //Se generan los encabezados
 hojaincidencias.columns = [
     {
-        header: "uid",
+        header: "Uid",
         key: "uid",
         width: 30,
     },
@@ -261,11 +261,361 @@ hojaincidencias.columns = [
     {
         header: "FechaHoraCaptura",
         key: "fechaHoraCaptura",
-        width: 30,
+        width: 38,
     },
     {
         header: "FechaHoraActualizacion",
         key: "fechaHoraActualizacion",
+        width: 38,
+    },
+];
+
+hojapersonasDB.columns = [
+    {
+        header: "Uid",
+        key: "uid",
+        width: 30,
+    },
+    {
+        header: "Alias",
+        key: "alias",
+        width: 30,
+    },
+    {
+        header: "Activo",
+        key: "activo",
+        width: 30,
+    },
+    {
+        header: "IncidenteId",
+        key: "incidenteId",
+        width: 30,
+    },
+    {
+        header: "FechaCreacion",
+        key: "fechaCreacion",
+        width: 30,
+    },
+    {
+        header: "Nombre",
+        key: "nombre",
+        width: 30,
+    },
+    {
+        header: "ApellidoP",
+        key: "apellidoP",
+        width: 30,
+    },
+    {
+        header: "ApellidoM",
+        key: "apellidoM",
+        width: 30,
+    },
+    {
+        header: "Edad",
+        key: "edad",
+        width: 30,
+    },
+    {
+        header: "FechaNacimiento",
+        key: "fechaNacimiento",
+        width: 30,
+    },
+    {
+        header: "Telefono",
+        key: "telefono",
+        width: 30,
+    },
+    {
+        header: "TelefonoContacto",
+        key: "telefonoContacto",
+        width: 30,
+    },
+    {
+        header: "Genero",
+        key: "genero",
+        width: 30,
+    },
+    {
+        header: "EstadoCivil",
+        key: "estadoCivil",
+        width: 30,
+    },
+    {
+        header: "Nacionalidad",
+        key: "nacionalidad",
+        width: 30,
+    },
+    {
+        header: "Ocupacion",
+        key: "ocupacion",
+        width: 30,
+    },
+    {
+        header: "Escolaridad",
+        key: "escolaridad",
+        width: 30,
+    },
+    {
+        header: "NombrePadre",
+        key: "nombrePadre",
+        width: 30,
+    },
+    {
+        header: "NombreMadre",
+        key: "nombreMadre",
+        width: 30,
+    },
+    {
+        header: "Estatura",
+        key: "estatura",
+        width: 30,
+    },
+    {
+        header: "Vestimenta",
+        key: "vestimenta",
+        width: 30,
+    },
+    {
+        header: "SueldoSemanal",
+        key: "sueldoSemanal",
+        width: 30,
+    },
+    {
+        header: "Domicilio",
+        key: "domicilio",
+        width: 30,
+    },
+    {
+        header: "Antecedentes",
+        key: "antecedentes",
+        width: 30,
+    },
+    {
+        header: "Proceso",
+        key: "proceso",
+        width: 30,
+    },
+    {
+        header: "Calidad_activo",
+        key: "calidadactivo",
+        width: 30,
+    },
+    {
+        header: "Calidad_nombre",
+        key: "calidadnombre",
+        width: 30,
+    },
+    {
+        header: "Observaciones",
+        key: "observaciones",
+        width: 50,
+    },
+    {
+        header: "Identificacion",
+        key: "identificacion",
+        width: 30,
+    },
+    {
+        header: "SeñasParticulares",
+        key: "señasParticulares",
+        width: 30,
+    },
+];
+
+hojavehiculosDB.columns = [
+    {
+        header: "Uid",
+        key: "uid",
+        width: 30,
+    },
+    {
+        header: "Activo",
+        key: "activo",
+        width: 30,
+    },
+    {
+        header: "Calidad_nombre",
+        key: "calidanombre",
+        width: 30,
+    },
+    {
+        header: "Tipo_descripcion",
+        key: "tipodescripcion",
+        width: 30,
+    },
+    {
+        header: "Modelo",
+        key: "modelo",
+        width: 30,
+    },
+    {
+        header: "Marca_descripcion",
+        key: "marcadescripcion",
+        width: 30,
+    },
+    {
+        header: "Submarca_descripcion",
+        key: "submarcadescripcion",
+        width: 30,
+    },
+    {
+        header: "Color",
+        key: "color",
+        width: 30,
+    },
+    {
+        header: "Placa",
+        key: "placa",
+        width: 30,
+    },
+    {
+        header: "Serie",
+        key: "serie",
+        width: 30,
+    },
+    {
+        header: "Motor",
+        key: "motor",
+        width: 30,
+    },
+    {
+        header: "Niv",
+        key: "niv",
+        width: 30,
+    },
+    {
+        header: "Propietario",
+        key: "propietario",
+        width: 30,
+    },
+    {
+        header: "Observaciones",
+        key: "observaciones",
+        width: 30,
+    },
+    {
+        header: "FechaCreacion",
+        key: "fechaCreacion",
+        width: 30,
+    },
+    {
+        header: "IncidenteId",
+        key: "incidenteId",
+        width: 30,
+    },
+];
+hojaarmasDB.columns = [
+    {
+        header: "Uid",
+        key: "uid",
+        width: 30,
+    },
+    {
+        header: "Activo",
+        key: "activo",
+        width: 30,
+    },
+    {
+        header: "Cantidad",
+        key: "cantidad",
+        width: 30,
+    },
+    {
+        header: "Tipo_descripcion",
+        key: "tipo",
+        width: 30,
+    },
+    {
+        header: "Calibre_descripcion",
+        key: "calibre",
+        width: 30,
+    },
+    {
+        header: "matricula",
+        key: "matricula",
+        width: 30,
+    },
+    {
+        header: "fabricante",
+        key: "fabricante",
+        width: 30,
+    },
+    {
+        header: "noSerie",
+        key: "noSerie",
+        width: 30,
+    },
+    {
+        header: "modelo",
+        key: "modelo",
+        width: 30,
+    },
+    {
+        header: "Calidad_nombre",
+        key: "calidad",
+        width: 30,
+    },
+    {
+        header: "fechaCreacion",
+        key: "fechaCreacion",
+        width: 30,
+    },
+    {
+        header: "incidenteId",
+        key: "incidenteId",
+        width: 30,
+    },
+    {
+        header: "observaciones",
+        key: "observaciones",
+        width: 30,
+    },
+];
+hojadrogasDB.columns = [
+    {
+        header: "Uid",
+        key: "uid",
+        width: 30,
+    },
+    {
+        header: "activo",
+        key: "activo",
+        width: 30,
+    },
+    {
+        header: "Tipo",
+        key: "tipo",
+        width: 30,
+    },
+    {
+        header: "Cantidad",
+        key: "cantidad",
+        width: 30,
+    },
+    {
+        header: "Unidad",
+        key: "unidad",
+        width: 30,
+    },
+    {
+        header: "Calidad",
+        key: "calidad",
+        width: 30,
+    },
+    {
+        header: "Observaciones",
+        key: "observaciones",
+        width: 30,
+    },
+    {
+        header: "IncidenteId",
+        key: "incidenteId",
+        width: 30,
+    },
+    {
+        header: "fechaCreacion",
+        key: "fechaCreacion",
         width: 30,
     },
 ];
