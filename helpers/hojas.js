@@ -64,12 +64,12 @@ hojaincidencias.columns = [
         width: 30,
     },
     {
-        header: "LugarDeHechos_postal ",
+        header: "LugarDeHechos_postal",
         key: "postal",
         width: 30,
     },
     {
-        header: "LugarDeHechos_latitud ",
+        header: "LugarDeHechos_latitud",
         key: "lat",
         width: 30,
     },
@@ -139,18 +139,33 @@ hojaincidencias.columns = [
         width: 30,
     },
     {
-        header: "FechaHoraEvento ",
-        key: "fechaHoraEvento",
+        header: "FechaEvento ",
+        key: "fechaEvento",
         width: 30,
     },
     {
-        header: "FechaHoraConocimiento ",
-        key: "fechaHoraConocimiento",
+        header: "HoraEvento ",
+        key: "horaEvento",
         width: 30,
     },
     {
-        header: "FechaHoraRespondiente ",
-        key: "fechaHoraRespondiente",
+        header: "FechaConocimiento ",
+        key: "fechaConocimiento",
+        width: 30,
+    },
+    {
+        header: "HoraConocimiento ",
+        key: "horaConocimiento",
+        width: 30,
+    },
+    {
+        header: "FechaRespondiente ",
+        key: "fechaRespondiente",
+        width: 30,
+    },
+    {
+        header: "HoraRespondiente ",
+        key: "horaRespondiente",
         width: 30,
     },
     {
@@ -259,13 +274,23 @@ hojaincidencias.columns = [
         width: 30,
     },
     {
-        header: "FechaHoraCaptura",
-        key: "fechaHoraCaptura",
+        header: "FechaCaptura",
+        key: "fechaCaptura",
         width: 38,
     },
     {
-        header: "FechaHoraActualizacion",
-        key: "fechaHoraActualizacion",
+        header: "HoraCaptura",
+        key: "horaCaptura",
+        width: 38,
+    },
+    {
+        header: "FechaActualizacion",
+        key: "fechaActualizacion",
+        width: 38,
+    },
+    {
+        header: "HoraActualizacion",
+        key: "horaActualizacion",
         width: 38,
     },
 ];
@@ -277,6 +302,11 @@ hojapersonasDB.columns = [
         width: 30,
     },
     {
+        header: "IncidenteId",
+        key: "incidenteId",
+        width: 30,
+    },
+    {
         header: "Alias",
         key: "alias",
         width: 30,
@@ -284,11 +314,6 @@ hojapersonasDB.columns = [
     {
         header: "Activo",
         key: "activo",
-        width: 30,
-    },
-    {
-        header: "IncidenteId",
-        key: "incidenteId",
         width: 30,
     },
     {
@@ -374,7 +399,7 @@ hojapersonasDB.columns = [
     {
         header: "Vestimenta",
         key: "vestimenta",
-        width: 30,
+        width: 60,
     },
     {
         header: "SueldoSemanal",
@@ -382,8 +407,33 @@ hojapersonasDB.columns = [
         width: 30,
     },
     {
-        header: "Domicilio",
-        key: "domicilio",
+        header: "Domicilio_calle",
+        key: "domiciliocalle",
+        width: 30,
+    },
+    {
+        header: "Domicilio_numero",
+        key: "domicilionumero",
+        width: 30,
+    },
+    {
+        header: "Domicilio_colonia",
+        key: "domiciliocolonia",
+        width: 30,
+    },
+    {
+        header: "Municipio",
+        key: "municipio",
+        width: 30,
+    },
+    {
+        header: "Estado",
+        key: "estado",
+        width: 30,
+    },
+    {
+        header: "Postal",
+        key: "postal",
         width: 30,
     },
     {
@@ -422,11 +472,17 @@ hojapersonasDB.columns = [
         width: 30,
     },
 ];
+hojapersonasDB.getColumn(9).value = "12345";
 
 hojavehiculosDB.columns = [
     {
         header: "Uid",
         key: "uid",
+        width: 30,
+    },
+    {
+        header: "IncidenteId",
+        key: "incidenteId",
         width: 30,
     },
     {
@@ -499,16 +555,16 @@ hojavehiculosDB.columns = [
         key: "fechaCreacion",
         width: 30,
     },
-    {
-        header: "IncidenteId",
-        key: "incidenteId",
-        width: 30,
-    },
 ];
 hojaarmasDB.columns = [
     {
         header: "Uid",
         key: "uid",
+        width: 30,
+    },
+    {
+        header: "incidenteId",
+        key: "incidenteId",
         width: 30,
     },
     {
@@ -561,11 +617,7 @@ hojaarmasDB.columns = [
         key: "fechaCreacion",
         width: 30,
     },
-    {
-        header: "incidenteId",
-        key: "incidenteId",
-        width: 30,
-    },
+
     {
         header: "observaciones",
         key: "observaciones",
@@ -576,6 +628,11 @@ hojadrogasDB.columns = [
     {
         header: "Uid",
         key: "uid",
+        width: 30,
+    },
+    {
+        header: "IncidenteId",
+        key: "incidenteId",
         width: 30,
     },
     {
@@ -606,11 +663,6 @@ hojadrogasDB.columns = [
     {
         header: "Observaciones",
         key: "observaciones",
-        width: 30,
-    },
-    {
-        header: "IncidenteId",
-        key: "incidenteId",
         width: 30,
     },
     {

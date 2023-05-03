@@ -1,7 +1,7 @@
 const modeloxls = require("./modeloXLS.json");
 const fs = require("fs");
 const moment = require("moment");
-moment.locale("es");
+moment.locale("es-mx");
 const {
     Workbook,
     hojaincidencias,
@@ -20,7 +20,7 @@ const createExcel = async (model) => {
         countdrogasDB = 0;
 
     try {
-        await model.incidencias.map((incidencia, idx) => {
+        await model.incidentesDB.map((incidencia, idx) => {
             incidencia.telefonia.forEach((incidenciatelefonia) => {
                 incidencia.dinero.forEach((incidenciadinero) => {
                     hojaincidencias.addRow({
@@ -32,6 +32,9 @@ const createExcel = async (model) => {
                         postal: incidencia.lugarDeHechos.postal,
                         lat: incidencia.lugarDeHechos.lat,
                         lng: incidencia.lugarDeHechos.lng,
+                        entidadPersonas: Object.values(
+                            incidencia.entidadPersonas
+                        ).toString(),
                         capturo: incidencia.capturo.nombre,
                         dependencia: incidencia.dependencia.nombre,
                         areaReporte: incidencia.areaReporte.nombre,
@@ -43,9 +46,32 @@ const createExcel = async (model) => {
                         folioIPH: incidencia.folioIPH,
                         iphFile: incidencia.iphFile,
                         folio: incidencia.folio,
-                        fechaHoraEvento: incidencia.fechaHoraEvento,
-                        fechaHoraConocimiento: incidencia.fechaHoraConocimiento,
-                        fechaHoraConocimiento: incidencia.fechaHoraConocimiento,
+                        fechaEvento: incidencia.fechaHoraEvento
+                            ? moment(incidencia.fechaHoraEvento).format("L")
+                            : "",
+                        horaEvento: moment(incidencia.fechaHoraEvento).format(
+                            "hh:mm a"
+                        ),
+                        fechaConocimiento: incidencia.fechaHoraConocimiento
+                            ? moment(incidencia.fechaHoraConocimiento).format(
+                                  "L"
+                              )
+                            : "",
+                        horaConocimiento: incidencia.fechaHoraConocimiento
+                            ? moment(incidencia.fechaHoraConocimiento).format(
+                                  "hh:mm a"
+                              )
+                            : "",
+                        fechaRespondiente: incidencia.fechaHoraRespondiente
+                            ? moment(incidencia.fechaHoraRespondiente).format(
+                                  "L"
+                              )
+                            : "",
+                        horaRespondiente: incidencia.fechaHoraRespondiente
+                            ? moment(incidencia.fechaHoraRespondiente).format(
+                                  "hh:mm a"
+                              )
+                            : "",
                         institucion: incidencia.primerRespondiente.institucion,
                         activo: incidencia.primerRespondiente.activo
                             ? "Activo"
@@ -53,7 +79,8 @@ const createExcel = async (model) => {
                         empleado: incidencia.primerRespondiente.empleado,
                         grado: incidencia.primerRespondiente.grado,
                         nombre: incidencia.primerRespondiente.nombre,
-                        elementosEnSitio: incidencia.elementosEnSitio,
+                        elementosEnSitio:
+                            incidencia.elementosEnSitio.toString(),
                         narrativa: incidencia.narrativa,
                         numero: incidenciatelefonia.datosAdicionales.telefonia
                             .numero,
@@ -61,71 +88,91 @@ const createExcel = async (model) => {
                             .telefoniaimei,
                         calidad: incidenciatelefonia.calidad,
                         observaciones: incidenciatelefonia.observaciones,
-                        objetos: incidencia.objetos,
-                        dinerocantidad: `$ ${incidenciadinero.datosAdicionales.dinero.cantidad}`,
+                        objetos: incidencia.objetos.toString(),
+                        dinerocantidad:
+                            incidenciadinero.datosAdicionales.dinero.cantidad,
                         dinerotipo:
                             incidenciadinero.datosAdicionales.dinero.tipo,
                         dinerocalidad: incidenciadinero.calidad,
                         dineroobservaciones: incidenciadinero.observaciones,
-                        cuentas: incidencia.cuentas,
+                        cuentas: incidencia.cuentas.toString(),
                         grupo: incidencia.grupo,
                         crp: incidencia.crp,
                         bodycam: incidencia.bodycam,
                         caso: incidencia.caso,
-                        fechaHoraCaptura: moment(
-                            incidencia.fechaHoraCaptura
-                        ).format("dddd Do MMMM YYYY hh:mm:ss"),
-                        fechaHoraActualizacion: moment(
-                            incidencia.fechaHoraActualizacion
-                        ).format("dddd Do MMMM YYYY hh:mm:ss"),
+                        fechaCaptura: incidencia.fechaHoraCaptura
+                            ? moment(incidencia.fechaHoraCaptura).format("L ")
+                            : "",
+                        horaCaptura: incidencia.fechaHoraCaptura
+                            ? moment(incidencia.fechaHoraCaptura).format(
+                                  "hh:mm a"
+                              )
+                            : "",
+                        fechaActualizacion: incidencia.fechaHoraActualizacion
+                            ? moment(incidencia.fechaHoraActualizacion).format(
+                                  "L"
+                              )
+                            : "",
+                        horaActualizacion: incidencia.fechaHoraActualizacion
+                            ? moment(incidencia.fechaHoraActualizacion).format(
+                                  "hh:mm a"
+                              )
+                            : "",
                     });
                 });
             });
-
             countincidencia = countincidencia + 1;
         });
+
         await model.personasDB.map((persona, idx) => {
             hojapersonasDB.addRow({
                 uid: persona.uid,
-                alias: persona.alias,
-                activo: persona.activo ? "Si" : "No",
                 incidenteId: persona.incidenteId,
-                fechaCreacion: moment(persona.fechaCreacion).format(
-                    "dddd Do MMMM YYYY "
-                ),
+                alias: Object.values(persona.alias).toString(),
+                activo: persona.activo ? "Si" : "No",
+                fechaCreacion: moment(persona.fechaCreacion).format("L"),
                 nombre: persona.nombre,
                 apellidoP: persona.apellidoP,
                 apellidoM: persona.apellidoM,
                 edad: persona.edad,
-                fechaNacimiento: moment(persona.fechaNacimiento).format(
-                    "dddd Do MMMM YYYY "
-                ),
+                fechaNacimiento: moment(persona.fechaNacimiento).format("L"),
                 telefono: persona.telefono,
                 telefonoContacto: persona.telefonoContacto,
-                genero: persona.genero,
-                estadoCivil: persona.estadoCivil,
-                nacionalidad: persona.nacionalidad,
-                ocupacion: persona.ocupacion,
-                escolaridad: persona.escolaridad,
+                genero: persona.genero.descripcion,
+                estadoCivil: persona.estadoCivil.descripcion,
+                nacionalidad: persona.nacionalidad.descripcion,
+                ocupacion: persona.ocupacion.descripcion,
+                escolaridad: persona.escolaridad.descripcion,
                 nombrePadre: persona.nombrePadre,
                 nombreMadre: persona.nombreMadre,
                 estatura: persona.estatura,
                 vestimenta: persona.vestimenta,
-                sueldoSemanal: `$ ${persona.sueldoSemanal}`,
-                domicilio: persona.domicilio,
-                antecedentes: persona.antecedentes,
+                sueldoSemanal: persona.sueldoSemanal,
+                domiciliocalle: persona.domicilio.calle,
+                domicilionumero: persona.domicilio.numero,
+                domiciliocolonia: persona.domicilio.colonia,
+                municipio: persona.domicilio.municipio.descripcion,
+                estado: persona.domicilio.estado.descripcion,
+                postal: persona.domicilio.postal,
+                antecedentes: Object.values(persona.antecedentes).toString(),
                 proceso: persona.proceso,
                 calidadactivo: persona.calidad.activo ? "Activo" : "Inactivo",
                 calidadnombre: persona.calidad.nombre,
                 observaciones: persona.observaciones,
-                identificacion: persona.identificacion,
-                señasParticulares: persona.señasParticulares,
+                identificacion: Object.values(
+                    persona.identificacion
+                ).toString(),
+                señasParticulares: Object.values(
+                    persona.señasParticulares
+                ).toString(),
             });
             countpersonasDB = countpersonasDB + 1;
         });
+
         await model.vehiculosDB.map((vehiculo, idx) => {
             hojavehiculosDB.addRow({
                 uid: vehiculo.uid,
+                incidenteId: vehiculo.incidenteId,
                 activo: vehiculo.activo ? "Activo" : "Inactivo",
                 calidanombre: vehiculo.calidad.nombre,
                 tipodescripcion: vehiculo.tipo.descripcion,
@@ -139,16 +186,14 @@ const createExcel = async (model) => {
                 niv: vehiculo.niv,
                 propietario: vehiculo.propietario,
                 observaciones: vehiculo.observaciones,
-                fechaCreacion: moment(vehiculo.fechaCreacion).format(
-                    "dddd Do MMMM YYYY hh:mm:ss"
-                ),
-                incidenteId: vehiculo.incidenteId,
+                fechaCreacion: moment(vehiculo.fechaCreacion).format("L"),
             });
             countvehiculosDB = countvehiculosDB + 1;
         });
         await model.armasDB.map((arma, idx) => {
             hojaarmasDB.addRow({
                 uid: arma.uid,
+                incidenteId: arma.incidenteId,
                 activo: arma.activo ? "Activo" : "Inactivo",
                 cantidad: arma.cantidad,
                 tipo: arma.tipo.descripcion,
@@ -158,10 +203,7 @@ const createExcel = async (model) => {
                 noSerie: arma.noSerie,
                 modelo: arma.modelo,
                 calidad: arma.calidad.nombre,
-                fechaCreacion: moment(arma.fechaCreacion).format(
-                    "dddd Do MMMM YYYY hh:mm:ss"
-                ),
-                incidenteId: arma.incidenteId,
+                fechaCreacion: moment(arma.fechaCreacion).format("L"),
                 observaciones: arma.observaciones,
             });
             countarmasDB = countarmasDB + 1;
@@ -169,16 +211,14 @@ const createExcel = async (model) => {
         await model.drogasDB.map((droga, idx) => {
             hojadrogasDB.addRow({
                 uid: droga.uid,
-                activo: droga.activo,
+                incidenteId: droga.incidenteId,
+                activo: droga.activo ? "Activo" : "inactivo",
                 tipo: droga.tipo.descripcion,
                 cantidad: droga.cantidad,
                 unidad: droga.unidad,
                 calidad: droga.calidad.nombre,
                 observaciones: droga.observaciones,
-                incidenteId: droga.incidenteId,
-                fechaCreacion: moment(droga.fechaCreacion).format(
-                    "dddd Do MMMM YYYY hh:mm:ss"
-                ),
+                fechaCreacion: moment(droga.fechaCreacion).format("L"),
             });
             countdrogasDB = countdrogasDB + 1;
         });

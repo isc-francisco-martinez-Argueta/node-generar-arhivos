@@ -1,5 +1,6 @@
 {
-    "incidencias": [
+    "ok": true,
+    "incidentesDB": [
         {
             "lugarDeHechos": {
                 "calle": "LA PLAYA",
@@ -10,7 +11,7 @@
                 "lat": "",
                 "lng": ""
             },
-            "entidadPersonas": [],
+            "entidadPersonas": ["persona1", "persona"],
             "capturo": {
                 "_id": "640651886bf83c17b4ce35ce",
                 "nombre": "CECILIA CONTRERAS"
@@ -58,8 +59,8 @@
                     },
                     "archivos": ["2023041166.jpg"],
                     "_id": "6435fe335e48b50254c7be0b",
-                    "calidad": "fddf",
-                    "observaciones": "rerere"
+                    "calidad": "",
+                    "observaciones": ""
                 }
             ],
             "objetos": [],
@@ -108,17 +109,58 @@
             "fechaNacimiento": "2003-07-18",
             "telefono": "8118659936",
             "telefonoContacto": "",
-            "genero": "637291b6112d132dac0b4dc6",
-            "estadoCivil": "63728aff3369732bb8ec0b62",
-            "nacionalidad": "637280200f6cdf272bf7adae",
-            "ocupacion": "6410e191a3c911a0a25d06b6",
-            "escolaridad": "6372a419adf8393317677935",
+            "genero": {
+                "_id": "637291b6112d132dac0b4dc6",
+                "descripcion": "MASCULINO"
+            },
+            "estadoCivil": {
+                "_id": "63728aff3369732bb8ec0b62",
+                "descripcion": "CASADO"
+            },
+            "nacionalidad": {
+                "_id": "637280200f6cdf272bf7adae",
+                "descripcion": "MEXICANA"
+            },
+            "ocupacion": {
+                "_id": "6410e191a3c911a0a25d06b6",
+                "descripcion": "SOLDADOR"
+            },
+            "escolaridad": {
+                "_id": "6372a419adf8393317677935",
+                "descripcion": "SECUNDARIA"
+            },
             "nombrePadre": "",
             "nombreMadre": "",
             "estatura": "",
             "vestimenta": "SUDADERA ROJA, PANTALON CAMUFLAJEADO, TENIS NEGROS",
             "sueldoSemanal": null,
-            "domicilio": "6435f8fc5e48b50254c7bdfb",
+            "domicilio": {
+                "activo": true,
+                "_id": "6435f8fc5e48b50254c7bdfb",
+                "calle": "VALLE DE JUAREZ 164",
+                "numero": "",
+                "colonia": "VALLE SOLEADO",
+                "municipio": {
+                    "_id": "63541f16476ba725b2345d39",
+                    "id": 973,
+                    "cve_estado": "19",
+                    "cve_municipio": "26",
+                    "descripcion": "Guadalupe"
+                },
+                "estado": {
+                    "_id": "63541ee8476ba725b234595d",
+                    "id": 19,
+                    "cve_estado": "19",
+                    "descripcion": "Nuevo León",
+                    "abreviacion": "NL"
+                },
+                "postal": "",
+                "lat": "25.6874654",
+                "lng": "-100.2066508",
+                "idRelacion": "6435f8fc5e48b50254c7bdfc",
+                "tipo": "PERSONA",
+                "__v": 0
+            },
             "antecedentes": [],
             "proceso": "CAPTURA",
             "calidad": {
@@ -147,17 +189,58 @@
             "fechaNacimiento": "1990-01-03",
             "telefono": "",
             "telefonoContacto": "",
-            "genero": "637291b6112d132dac0b4dc6",
-            "estadoCivil": "63728b3e3369732bb8ec0b63",
-            "nacionalidad": "637280200f6cdf272bf7adae",
-            "ocupacion": "6410e191a3c911a0a25d06a2",
-            "escolaridad": "6412131cf465cf26546758f4",
+            "genero": {
+                "_id": "637291b6112d132dac0b4dc6",
+                "descripcion": "MASCULINO"
+            },
+            "estadoCivil": {
+                "_id": "63728b3e3369732bb8ec0b63",
+                "descripcion": "SOLTERO"
+            },
+            "nacionalidad": {
+                "_id": "637280200f6cdf272bf7adae",
+                "descripcion": "MEXICANA"
+            },
+            "ocupacion": {
+                "_id": "6410e191a3c911a0a25d06a2",
+                "descripcion": "EMPLEADO"
+            },
+            "escolaridad": {
+                "_id": "6412131cf465cf26546758f4",
+                "descripcion": "LICENCIATURA"
+            },
             "nombrePadre": "",
             "nombreMadre": "",
             "estatura": "",
             "vestimenta": "PLAYERA AZUL Y PANTALON DE MEZCLILLA",
             "sueldoSemanal": null,
-            "domicilio": "6435f9f55e48b50254c7be01",
+            "domicilio": {
+                "activo": true,
+                "_id": "6435f9f55e48b50254c7be01",
+                "calle": "MERCIER 155",
+                "numero": "",
+                "colonia": "SANTA MARIA",
+                "municipio": {
+                    "_id": "63541f16476ba725b2345d4d",
+                    "id": 993,
+                    "cve_estado": "19",
+                    "cve_municipio": "46",
+                    "descripcion": "San Nicolás de los Garza"
+                },
+                "estado": {
+                    "_id": "63541ee8476ba725b234595d",
+                    "id": 19,
+                    "cve_estado": "19",
+                    "descripcion": "Nuevo León",
+                    "abreviacion": "NL"
+                },
+                "postal": "",
+                "lat": "25.7541215",
+                "lng": "-100.2816336",
+                "idRelacion": "6435f9f55e48b50254c7be02",
+                "tipo": "PERSONA",
+                "__v": 0
+            },
             "antecedentes": [],
             "proceso": "CAPTURA",
             "calidad": {
@@ -196,17 +279,58 @@
             "fechaNacimiento": "2004-08-14",
             "telefono": "",
             "telefonoContacto": "",
-            "genero": "637291b6112d132dac0b4dc6",
-            "estadoCivil": "63728b3e3369732bb8ec0b63",
-            "nacionalidad": "637280200f6cdf272bf7adae",
-            "ocupacion": "6410e191a3c911a0a25d06b5",
-            "escolaridad": "6372a434adf8393317677937",
+            "genero": {
+                "_id": "637291b6112d132dac0b4dc6",
+                "descripcion": "MASCULINO"
+            },
+            "estadoCivil": {
+                "_id": "63728b3e3369732bb8ec0b63",
+                "descripcion": "SOLTERO"
+            },
+            "nacionalidad": {
+                "_id": "637280200f6cdf272bf7adae",
+                "descripcion": "MEXICANA"
+            },
+            "ocupacion": {
+                "_id": "6410e191a3c911a0a25d06b5",
+                "descripcion": "REPARTIDOR"
+            },
+            "escolaridad": {
+                "_id": "6372a434adf8393317677937",
+                "descripcion": "BACHILLERATO"
+            },
             "nombrePadre": "",
             "nombreMadre": "",
             "estatura": "",
             "vestimenta": "",
             "sueldoSemanal": null,
-            "domicilio": "6435fbde5e48b50254c7be04",
+            "domicilio": {
+                "activo": true,
+                "_id": "6435fbde5e48b50254c7be04",
+                "calle": "VALLE CLARO 3848",
+                "numero": "",
+                "colonia": "REAL DE PALMAS",
+                "municipio": {
+                    "_id": "63541f16476ba725b2345d38",
+                    "id": 972,
+                    "cve_estado": "19",
+                    "cve_municipio": "25",
+                    "descripcion": "General Zuazua"
+                },
+                "estado": {
+                    "_id": "63541ee8476ba725b234595d",
+                    "id": 19,
+                    "cve_estado": "19",
+                    "descripcion": "Nuevo León",
+                    "abreviacion": "NL"
+                },
+                "postal": "",
+                "lat": "",
+                "lng": "",
+                "idRelacion": "6435fbde5e48b50254c7be05",
+                "tipo": "PERSONA",
+                "__v": 0
+            },
             "antecedentes": [],
             "proceso": "CAPTURA",
             "calidad": {
